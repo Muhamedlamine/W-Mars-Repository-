@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CanvasScript : MonoBehaviour
+{
+
+    public GameObject MainMenu;
+    public GameObject PlayMode;
+    public GameObject FactsMars;
+
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+
+    } 
+    public void GoToPlayMode()
+    {
+        MainMenu.SetActive(false);
+        PlayMode.SetActive(true);
+
+    }
+    public void FactsAboutMars()
+    {
+        MainMenu.SetActive(false);
+        FactsMars.SetActive(true);
+
+    }
+}
+
