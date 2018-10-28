@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameSwitch : MonoBehaviour {
+
+
+    public Camera [] cams;
+    public GameObject Canvas;
+
+	public void MainCam()
+    {
+        cams[0].enabled = true;
+        cams[1].enabled = false;
+        cams[2].enabled = false;
+
+        Canvas.SetActive(false);
+
+    }
+
+    public void CamOne()
+    {
+        cams[0].enabled = false;
+        cams[1].enabled = true;
+        cams[2].enabled = false;
+
+        Canvas.SetActive(false);
+    }
+    public void CamTwo()
+    {
+        cams[0].enabled = false;
+        cams[1].enabled = false;
+        cams[2].enabled = true;
+
+        Canvas.SetActive(false);
+
+    }
+
+
+    
+
+
+}
+
+
